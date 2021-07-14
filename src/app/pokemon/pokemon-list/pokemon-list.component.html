@@ -1,0 +1,18 @@
+<app-pokemon-detalhe [pokemonFilho]="pokemonSelecionado"></app-pokemon-detalhe>
+<div class="pokemon-grid">
+  <div class="box" *ngFor="let pokemon of pokemons">
+
+    <img class=" mx-auto w-50" [src]="pokemon.sprites.front_default" alt="Pokemon">
+    <p>{{pokemon.name}}</p>
+    <div>
+      <button  class="btn btn-success " (click)="selecionarPokemon(pokemon.name)">Selecionar</button>
+    </div>
+  </div>
+</div>
+<div class="row my-5">
+  <div class="col-md-12 text-center">
+
+  <button class="btn btn-success mr-5" (click)="PaginaAnterior()">Página Anterior</button>
+  <button class="btn btn-success " (click)="proximaPagina()">Próxima Página</button>
+  </div>
+</div>
