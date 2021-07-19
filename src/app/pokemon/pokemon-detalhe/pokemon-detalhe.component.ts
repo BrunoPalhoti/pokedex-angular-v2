@@ -13,4 +13,9 @@ export class PokemonDetalheComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  public getGif(pokemonFilho: any){
+   console.log(pokemonFilho.sprites.versions)
+    return pokemonFilho.sprites.versions['generation-v']['black-white'].animated.front_default
+  }
 }
